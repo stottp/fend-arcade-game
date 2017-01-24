@@ -26,7 +26,7 @@ var Engine = (function(global) {
         lastTime;
 
     canvas.width = 505;
-    canvas.height = 606;
+    canvas.height = 605; 
     doc.body.appendChild(canvas);
 
     /* This function serves as the kickoff point for the game loop itself
@@ -152,6 +152,8 @@ var Engine = (function(global) {
         });
 
         player.render();
+		
+		gem.render();
     }
 
     /* This function does nothing but it could have been a good place to
@@ -159,7 +161,15 @@ var Engine = (function(global) {
      * those sorts of things. It's only called once by the init() method.
      */
     function reset() {
-        // noop
+		setTimeout(function() {
+			var show = true
+		}, 1200);
+		if (show = true) {
+			console.log('True');
+		} else {
+			console.log('False')
+		}
+       
     }
 
     /* Go ahead and load all of the images we know we're going to need to
@@ -171,7 +181,11 @@ var Engine = (function(global) {
         'images/water-block.png',
         'images/grass-block.png',
         'images/enemy-bug.png',
-        'images/char-boy.png'
+        'images/char-boy.png',
+		'images/gem-green-small.png',
+		'images/gem-blue-small.png',
+		'images/gem-orange-small.png',
+		'images/heart-small.png'
     ]);
     Resources.onReady(init);
 
