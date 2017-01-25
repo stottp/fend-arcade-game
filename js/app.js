@@ -1,14 +1,12 @@
 var TILE_WIDTH = 101,
     TILE_HEIGHT = 83;
 
-//reuse code for Enemy and Player
-var Character = function(x, y, sprite, speed, type) {
+//reuse code for Enemy and Player - couldn't get this to work
+var Character = function(x, y, sprite) {
     this.x = x;
     this.y = y;
     this.sprite = sprite;
-    this.speed = speed;
-	this.type = type;
-}
+};
 
 
 // Enemies our player must avoid
@@ -18,7 +16,8 @@ var Enemy = function(x, y, speed) {
 
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
-    this.x = x;
+    
+	this.x = x;
     this.y = y;
     this.sprite = 'images/enemy-bug.png';
     this.speed = speed;
